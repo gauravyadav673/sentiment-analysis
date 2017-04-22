@@ -1,0 +1,26 @@
+{
+  "name": "sentiment_analysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.0",
+    "mongoose": "^4.9.5",
+    "sentiment": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravyadav673/sentiment-analysis.git"
+  },
+  "author": "Gaurav Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauravyadav673/sentiment-analysis/issues"
+  },
+  "homepage": "https://github.com/gauravyadav673/sentiment-analysis#readme"
+}
