@@ -37,8 +37,26 @@ var saveData = new db({inputStatement:req.body.state,
 					});
 saveData.save(function(error,info){
 	})
-})
-
+});
+app.get('/analysis', function(req, res){
+	if(req.query.state){
+		var r1 = sentiment(req.query.state);
+		var result;
+		if(r1.comparative > 0.3)
+			result = 'positive'
+		else if(r1.comparative < -0.3)
+			result = 'negative'
+		else
+			result = 'neutral'
+		res.send(result)
+		var saveData = new db({inputStatement:req.query.state,
+						result:result
+					});
+		saveData.save(function(error,info){})
+	}else{
+		console.log('fail');
+	}
+});
 app.get('/',function(req,res){
 	res.send("Welcome to Gaurav's Sentiment analysis API")
 })
